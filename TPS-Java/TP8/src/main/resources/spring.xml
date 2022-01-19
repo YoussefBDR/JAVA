@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean name="ctrl1" class="presentation.OrderController">
+        <property name="service" ref="S1"></property>
+    </bean>
+    <bean name="S1" class="service.IOrderServiceImpl">
+        <property name="Dao" ref="D1"></property>
+    </bean>
+    <bean name="D1" class="dao.OrderDaoImpl">
+
+    </bean>
+</beans>
